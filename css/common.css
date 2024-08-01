@@ -55,6 +55,63 @@ html {
     margin-top: 2rem;
     color: purple;
 }
+.nav-container {
+    display: flex;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.205);
+}
+nav {
+    width: 90%;
+    margin: 0 auto;
+}
+.nav-container a, img {
+    display: inline-block;
+    margin: 1rem;
+    justify-content: left;
+
+}
+.nav-links {
+    list-style: none;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+
+    padding: 10px 0;
+}
+.nav-links li {
+    margin: 0 1rem;
+}
+
+.nav-links a {
+    text-decoration: none; /* Remove underline */
+    color: white; /* Link color */
+    padding: 10px 15px; /* Padding for clickable area */
+    display: block; /* Block display for full clickable area */
+}
+
+.nav-links a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 4px;
+}
+.nav-links .call {
+    display: inline-block; /* Makes the element behave like a button */
+    padding: 10px 20px; /* Adds padding for a button-like appearance */
+    font-size: 16px; /* Adjust the font size */
+    color: rgb(0, 0, 0); /* Text color */
+    background-color: white; /* Background color of the button */
+    border: none; /* Removes any default border */
+    border-radius: 5px; /* Rounds the corners */
+    text-decoration: none; /* Removes underline from link */
+    text-align: center; /* Centers the text */
+    cursor: pointer; /* Changes cursor to pointer on hover */
+}
+.nav-links .call:hover {
+    background-color:black;
+    color: white;
+}
+
+
 
 @media only screen and (max-width: 768px) {
     html {
