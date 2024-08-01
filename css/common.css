@@ -76,6 +76,7 @@ nav {
     display: flex;
     flex-direction: row;
     justify-content: right;
+    align-items: center;
 
     padding: 10px 0;
 }
@@ -101,7 +102,7 @@ nav {
     color: rgb(0, 0, 0); /* Text color */
     background-color: white; /* Background color of the button */
     border: none; /* Removes any default border */
-    border-radius: 5px; /* Rounds the corners */
+    border-radius: 7.5px; /* Rounds the corners */
     text-decoration: none; /* Removes underline from link */
     text-align: center; /* Centers the text */
     cursor: pointer; /* Changes cursor to pointer on hover */
@@ -110,11 +111,67 @@ nav {
     background-color:black;
     color: white;
 }
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 550px;
+    z-index: 999;
+    background-color: rgba(0, 0, 0, 0.26);
+    backdrop-filter: blur(10px);
+    box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
 
-
-
-@media only screen and (max-width: 768px) {
+}
+.sidebar li {
+    width: 100%;
+    margin: 0 1rem;
+    list-style-type: none;
+    display: flex; /* Use Flexbox */
+    align-items: center; /* Center items vertically */
+    justify-content: center; /* Center items horizontally */
+}
+.sidebar a {
+    width: 100%;
+    text-decoration: none; /* Remove underline */
+    color: white; /* Link color */
+    padding: 10px 15px; /* Padding for clickable area */
+    display: block; /* Block display for full clickable area */
+}
+.sidebar .call {
+    display: inline-block; /* Makes the element behave like a button */
+    width: 80%;
+    padding: 10px 20px; /* Adds padding for a button-like appearance */
+    font-size: 16px; /* Adjust the font size */
+    color: rgb(0, 0, 0); /* Text color */
+    background-color: white; /* Background color of the button */
+    border: none; /* Removes any default border */
+    border-radius: 5px; /* Rounds the corners */
+    text-decoration: none; /* Removes underline from link */
+    text-align: center; /* Centers the text */
+    
+}
+.menu-button {
+    display: none;
+}
+@media only screen and (max-width: 800px) {
     html {
         font-size: 10px;
+    }
+    .menu-button {
+        display: block;
+    }
+    .hideOnMobile {
+        display: none;
+    }
+    .sidebar {
+        width: 100%;
+    }
+    .sidebar a {
+        font-size: 18px;
     }
 }
