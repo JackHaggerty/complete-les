@@ -660,7 +660,7 @@ p {
     display: inline-block;
     padding: 10px 20px;
     background-color: #FC322F; /* Consistent with form button styling */
-    color: black;
+    color: white;
     text-decoration: none;
     border: none;
     border-radius: 5px;
