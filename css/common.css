@@ -14,7 +14,7 @@ html {
 #hero {
     width: 100%;
     height: 100vh; /* 100% of the viewport height */
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../images/pexels-stywo-1054218.jpg');
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../images/excavator-hero-2.jpg');
     background-size: cover; /* Ensures the image covers the entire section */
     background-position: center; /* Centers the image */
     background-repeat: no-repeat; 
@@ -48,31 +48,33 @@ html {
 .container .info a {
     text-decoration: none;
     display: inline-block;
-    background-color: white;
+    background-color: #FC322F;
     border-radius: 4px;
     font-size: 1.8rem;
     padding: 0.5em 2em;
     margin-top: 2rem;
-    color: purple;
+    color: white;
 }
 .nav-container {
     display: flex;
     width: 100%;
-    background-color: rgba(0, 0, 0, 0.205);
+    background-color: #B4EC51;
 }
 nav {
     width: 90%;
     margin: 0 auto;
-}
+}z
 .nav-container a, img {
     display: inline-block;
-    margin: 1rem;
+    margin: 5px;
     justify-content: left;
+    width: 300px;
+    height: auto;
 
 }
 .nav-links {
     list-style: none;
-    color: white;
+    color: black;
     display: flex;
     flex-direction: row;
     justify-content: right;
@@ -82,11 +84,12 @@ nav {
 }
 .nav-links li {
     margin: 0 1rem;
+    text-align: center;
 }
 
 .nav-links a {
     text-decoration: none; /* Remove underline */
-    color: white; /* Link color */
+    color: black; /* Link color */
     padding: 10px 15px; /* Padding for clickable area */
     display: block; /* Block display for full clickable area */
 }
@@ -158,7 +161,243 @@ nav {
 .menu-button {
     display: none;
 }
-@media only screen and (max-width: 800px) {
+
+/* About Us, Services, and Contact Form Styling */
+#services, #about-us {
+    padding: 60px 0;
+    background-color: #f4f4f4;
+    text-align: left;
+}
+
+
+#about-us {
+    background-color: #B4EC51;
+}
+
+/* Ensure flexbox layout is vertical (column) */
+#about-us .container, #services .container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+#about-us a, #services a {                                                                                                                                    
+    text-decoration: none;
+    display: inline-block;
+    background-color: #FC322F;
+    border-radius: 4px;
+    font-size: 1rem;
+    padding: 0.5em 2em;
+    margin-top: 2rem;
+    color: white;
+}
+/* Header and paragraph alignment for About Us and Services */
+h2 {
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+    text-align: left;
+}
+
+p {
+    font-size: 1.2rem;
+    margin-bottom: 50px;
+    text-align: left;
+}
+
+/* Services Section Styling */
+#services {
+    background-color: #f9f9f9; /* Soft background to separate the section visually */
+    padding: 60px 0; /* Add more padding for better spacing */
+}
+#services .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+#services h2 {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 40px;
+    color: #333; /* Darker heading for contrast */
+    text-transform: uppercase; /* Add text transformation for emphasis */
+    letter-spacing: 1.5px; /* Slight letter spacing for a polished look */
+}
+
+#services .services-list {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px; /* Add more spacing between the two columns */
+    flex-wrap: wrap;
+}
+
+.service {
+    flex: 1;
+    padding: 20px;
+    background-color: #fff; /* White background for each service block */
+    border: 1px solid #ddd; /* Subtle border to define each service block */
+    border-radius: 10px; /* Rounded corners for a modern look */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05); /* Soft shadow for depth */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service:hover {
+    transform: translateY(-5px); /* Slight upward movement on hover */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Enhance shadow on hover */
+}
+
+.service h3 {
+    font-size: 1.8rem;
+    color: #333; /* Make the headings a little darker for contrast */
+    margin-bottom: 20px;
+    text-transform: uppercase; /* Emphasize the headings */
+    letter-spacing: 1px; /* Slight letter spacing */
+    border-bottom: 2px solid #B4EC51; /* Add an accent underline for styling */
+    padding-bottom: 10px;
+}
+
+.service ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.service ul li {
+    font-size: 1.2rem;
+    color: #555; /* Softer color for list items */
+    margin-bottom: 10px;
+    padding-left: 20px; /* Add left padding for spacing */
+    position: relative;
+}
+
+.service ul li::before {
+    content: '•'; /* Custom bullet point */
+    color: #B4EC51; /* Accent color for bullet */
+    font-size: 1.5rem;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+/* Learn More Button Container */
+.learn-more-container {
+    width: 100%; /* Full width */
+    display: flex;
+    justify-content: flex-start; /* Aligns the button to the left */
+    padding: 20px 0;
+}
+
+.learn-more-button {
+    text-decoration: none;
+    background-color: #B4EC51;
+    color: #333;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.learn-more-button:hover {
+    background-color: #a3d749; /* Darker green on hover */
+}
+
+/* ------------------------------------ footer --------------------------- */
+.footer {
+    background-color: #B4EC51; /* Update with your project’s primary color */
+    color: #333333; /* Darker text color for contrast */
+    display: flex;
+    flex-direction: column; /* Stack the footer items vertically */
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    width: 100%; /* Ensure full width */
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    width: 100%; /* Full width for the content */
+    padding: 1rem 0;
+}
+
+.footer-logo, .footer-contact, .footer-nav {
+    flex: 1;
+}
+
+.footer-logo {
+    text-align: left;
+}
+
+.footer-contact {
+    text-align: center;
+}
+
+.footer-nav {
+    text-align: right;
+}
+
+.footer-logo img {
+    width: 300px;
+    height: auto;
+}
+
+.footer-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-nav ul li {
+    margin: 10px 0;
+}
+
+.footer-nav ul li a {
+    color: #333333; /* Darker text color for navigation links */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-nav ul li a:hover {
+    color: #fff; /* Change color on hover for better visibility */
+}
+
+.footer-contact p, .footer-contact a {
+    margin: 0;
+    padding: 5px;
+    color: #333333; /* Ensure consistent text color */
+    text-align: center;
+}
+
+.footer-social a {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+.footer-social img {
+    width: 60px;
+    height: auto;
+}
+
+/* Checkmate Web Development link */
+.checkmate-container {
+    width: 100%;
+    text-align: center; /* Center the checkmate link */
+    padding: 1rem 0; /* Add some padding */
+    margin-top: 1rem;
+    border-top: 1px solid #333333; /* Optional separator line with contrasting color */
+}
+
+.checkmate-link {
+    color: #333333; /* Darker text for contrast */
+    text-decoration: none;
+}
+
+.checkmate-link:hover {
+    text-decoration: underline; /* Add underline on hover */
+}
+
+
+@media only screen and (max-width: 768px) {
     html {
         font-size: 10px;
     }
