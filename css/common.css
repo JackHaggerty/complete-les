@@ -20,7 +20,15 @@ html {
     background-repeat: no-repeat; 
     color: white;
 }
-
+#alt-hero {
+    width: 100%;
+    height: 50vh; /* 100% of the viewport height */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../images/excavator-hero-2.jpg');
+    background-size: cover; /* Ensures the image covers the entire section */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; 
+    color: white;
+}
 .container {
     width: 80%;
     height: 100%;
@@ -395,6 +403,284 @@ p {
 .checkmate-link:hover {
     text-decoration: underline; /* Add underline on hover */
 }
+
+/** -------------------------------------------------------ABOUT US PAGE--------------------------------------------------------------------------------------------------------------- **/
+/* About Page Section */
+#about-page {
+    background-color: #fff;
+    padding: 60px 20px; /* Add padding for breathing space */
+}
+
+.about-container {
+    max-width: 1200px;
+    margin: 0 auto; /* Center the container */
+    padding: 0 20px;
+}
+
+#about-page h2 {
+    font-size: 2.8rem;
+    color: #333;
+    text-align: left;
+    margin-bottom: 40px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+/* About Content Columns */
+.about-content {
+    display: flex; /* Use flexbox for columns */
+    flex-direction: column;
+    gap: 20px; /* Add space between columns */
+    margin-bottom: 40px;
+}
+
+.about-text, .about-column {
+    flex: 1;
+}
+
+/* Ensure each text section has margin */
+.about-text p, .about-column p {
+    font-size: 1.2rem;
+    color: #555;
+    line-height: 1.8;
+    margin-bottom: 20px; /* Space between paragraphs */
+    max-width: 1000px;
+}
+
+.about-text, .about-column {
+    padding: 20px;
+    background-color: #B4EC51; /* Add background for clarity */
+    border-radius: 8px; /* Soft corners */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+/* Subheadings */
+#about-page h3 {
+    font-size: 1.8rem;
+    color: #333;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #B4EC51;
+    padding-bottom: 10px;
+}
+
+/* List Styling */
+.about-list {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.about-list li {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 10px;
+    padding-left: 25px;
+    position: relative;
+}
+
+.about-list li::before {
+    content: '✔'; /* Custom bullet */
+    color: #B4EC51;
+    font-size: 1.5rem;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+/* Button Styling */
+.learn-more-button {
+    text-decoration: none;
+    background-color: #FC322F;
+    color: white;
+    padding: 12px 25px;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    display: inline-block;
+    margin-top: 20px;
+}
+
+.learn-more-button:hover {
+    background-color: #a3d749;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+/* ------------------------------------ services ------------------------------------------------------------------- */
+/* Services Section Styling */
+#services-section {
+    padding: 60px 20px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+#services-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: #333;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+/* Services Category Styling */
+.services-category {
+    margin-bottom: 60px;
+}
+
+.services-category h3 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 30px;
+    text-align: left;
+    text-transform: uppercase;
+    border-bottom: 2px solid #B4EC51; /* Accent underline */
+    padding-bottom: 10px;
+}
+
+/* Services Cards Container */
+.services-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.services-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+/* Individual Service Card Styling */
+.service-card {
+    background-color: #B4EC51;
+    padding: 20px;
+    width: calc(50% - 20px); /* Adjust width to 50% for two columns */
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card h4 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    text-align: left;
+}
+
+.service-card p {
+    font-size: 1.1rem;
+    color: #555;
+    line-height: 1.6;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* -----------------------------------------------------contact--------------------------------------------------------------------------*/
+/* --------------- Contact Page -------------------------- */
+/* Contact Information Section */
+.contact-information {
+    display: flex; /* Maintain side-by-side layout for contact info and form */
+    justify-content: space-around; /* Distribute space evenly around items */
+    align-items: flex-start; /* Align items at the start of the flex container */
+    padding: 40px;
+    background-color: white; /* Changed to a lighter, fresher green background */
+    width: 100%; /* Full width of the parent container */
+}
+
+/* Contact Form Styles */
+.contact-form {
+    flex: 2; /* Allocate more space to the form for better visual balance */
+    margin-left: 20px; /* Maintain space between form and contact info */
+    background-color: #B4EC51; /* Darker shade for contrast */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+}
+
+.contact-form h1 {
+    font-size: 1.8em;
+    margin-bottom: 20px;
+    color: black; /* Light text color for readability against dark background */
+}
+
+.contact-form .form-group {
+    margin-bottom: 15px;
+}
+
+.contact-form .form-control {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd; /* Subtle border */
+    border-radius: 5px;
+    background-color: white; /* Light background for input fields */
+    color: #333; /* Dark text for contrast */
+}
+
+.contact-form .btn {
+    width: 100%;
+    padding: 10px;
+    background-color: #FC322F; /* Button background color */
+    color: #333; /* Button text color */
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+/* Contact Info Styles */
+.contact-info {
+    flex: 1; /* Smaller space allocation compared to the form */
+    background-color: #B4EC51; /* Dark background for a sleek look */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    align-self: flex-start; /* Ensure alignment to the top */
+}
+
+.contact-info h2 {
+    font-size: 1.5em;
+    margin-bottom: 15px;
+    color: black; /* Ensuring readability with a contrasting color */
+}
+
+.contact-info p, .contact-info a {
+    color: black; /* Maintain readability and aesthetic consistency */
+    margin-bottom: 10px;
+}
+
+.contact-info a:hover {
+    text-decoration: underline; /* Enhance usability with visual feedback on hover */
+}
+
+/* Style for the phone button */
+.phone-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #FC322F; /* Consistent with form button styling */
+    color: black;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    font-weight: bold;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.info-container {
+    width: 80%;
+    max-width: 1200px;
+    margin: 50px auto; /* Center the container with auto margins */
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Center content within the container */
+}
+
+
 
 
 @media only screen and (max-width: 768px) {
