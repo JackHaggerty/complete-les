@@ -1,0 +1,11 @@
+{
+	"folders": [
+		{
+			"name": "complete-les",
+			"path": "."
+		}
+	],
+	"settings": {
+		"liveServer.settings.port": 5502
+	}
+}

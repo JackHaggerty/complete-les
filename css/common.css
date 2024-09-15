@@ -13,13 +13,14 @@ html {
 
 #hero {
     width: 100%;
-    height: 100vh; /* 100% of the viewport height */
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../images/excavator-hero-2.jpg');
+    height: 80vh; /* 100% of the viewport height */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../images/excavator-hero-2.jpg');
     background-size: cover; /* Ensures the image covers the entire section */
     background-position: center; /* Centers the image */
     background-repeat: no-repeat; 
     color: white;
 }
+
 #alt-hero {
     width: 100%;
     height: 50vh; /* 100% of the viewport height */
@@ -29,14 +30,54 @@ html {
     background-repeat: no-repeat; 
     color: white;
 }
+.alt-container {
+    width: 80%;
+    height: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+
+    
+}
+.alt-info {
+    text-align: center; /* Center the text and logo */
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+.alt-info h1 {
+    font-size: 3rem;
+    align-items: center;
+    justify-content: center;
+    margin: 25% 0;
+    margin-right: 50%;
+}
 .container {
     width: 80%;
     height: 100%;
     max-width: 1200px;
     margin: 0 auto;
     display: flex;
-    align-items: center;
-    justify-content: center;
+
+    
+}
+.info {
+    text-align: center; /* Center the text and logo */
+}
+
+.hero-logo {
+    margin-top: 350px;
+    margin-bottom: 120px;
+}
+
+.hero-logo img {
+    width: 1250px; /* Adjust the logo size */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.info p {
+    font-size: 18px; /* Adjust the text size */
+    margin-bottom: 20px; /* Space between text and button */
 }
 
 .container .info h1 {
@@ -56,17 +97,21 @@ html {
 .container .info a {
     text-decoration: none;
     display: inline-block;
-    background-color: #FC322F;
+    background-color: #B4EC51;
     border-radius: 4px;
     font-size: 1.8rem;
     padding: 0.5em 2em;
     margin-top: 2rem;
-    color: white;
+    color: black;
 }
 .nav-container {
+    position: fixed;
+    z-index: 1000;
+    top: 0;
     display: flex;
     width: 100%;
     background-color: #B4EC51;
+
 }
 nav {
     width: 90%;
@@ -171,34 +216,52 @@ nav {
 }
 
 /* About Us, Services, and Contact Form Styling */
-#services, #about-us {
+#about-us {
     padding: 60px 0;
     background-color: #f4f4f4;
-    text-align: left;
+    text-align: center;
 }
 
 
-#about-us {
-    background-color: #B4EC51;
-}
+
 
 /* Ensure flexbox layout is vertical (column) */
-#about-us .container, #services .container {
+#about-us {
+    position: relative; /* Allows absolute positioning for icons */
+    padding-bottom: 80px; /* Adds space at the bottom for the icons */
+    background-color: #f9f9f9; /* Optional background color */
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.icon-list {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 30px; /* Space between icons */
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: transparent; /* Transparent background to fit design */
+}
+
+.icon-list li {
+    display: inline-block;
+}
+
+.icon-list li img {
+    width: 50px; /* Adjust the size of the icons */
+    height: auto;
+    opacity: 0.5;
+}
+
+#about-us .container {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
 }
-#about-us a, #services a {                                                                                                                                    
-    text-decoration: none;
-    display: inline-block;
-    background-color: #FC322F;
-    border-radius: 4px;
-    font-size: 1rem;
-    padding: 0.5em 2em;
-    margin-top: 2rem;
-    color: white;
-}
+
 /* Header and paragraph alignment for About Us and Services */
 h2 {
     font-size: 2.5rem;
@@ -209,58 +272,65 @@ h2 {
 p {
     font-size: 1.2rem;
     margin-bottom: 50px;
-    text-align: left;
+    text-align: center;
 }
 
-/* Services Section Styling */
+/* ------------------------------------------------------------------Services homepage Section Styling------------------------------------------- */
 #services {
-    background-color: #f9f9f9; /* Soft background to separate the section visually */
-    padding: 60px 0; /* Add more padding for better spacing */
+    background-color: #f9f9f9;
+    width: 100%; /* Full width of the page */
 }
-#services .container {
+
+#services .services-container {
+    width: 100%; /* Ensure the container takes up the full width of the page */
+    padding: 0; /* Remove any padding on the container */
+}
+
+#services .services-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* 2 equal columns */
+    grid-template-rows: 1fr 1fr;    /* 2 equal rows */
+    width: 100%; /* Full width grid */
+    height: 100%; /* Make all grid items equal height */
+}
+
+/* Service Section Styling */
+.service {
     display: flex;
-    flex-direction: column;
+    flex-direction: column; /* Align elements in a vertical column */
+    align-items: flex-start; /* Align items to the start (left by default) */
+    justify-content: flex-start; /* Start content from the top */
+    height: 100%; /* Ensure the div takes up full height */
+    padding: 150px;
+    background-color: #333333;
+    color: white;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../images/bulldozer.png');
+}
+
+.service-image {
+    display: flex;
     align-items: center;
     justify-content: center;
-}
-#services h2 {
-    font-size: 2.5rem;
-    text-align: center;
-    margin-bottom: 40px;
-    color: #333; /* Darker heading for contrast */
-    text-transform: uppercase; /* Add text transformation for emphasis */
-    letter-spacing: 1.5px; /* Slight letter spacing for a polished look */
+    background-color: #fff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    height: 100%; /* Ensure equal height for all grid items */
 }
 
-#services .services-list {
-    display: flex;
-    justify-content: space-between;
-    gap: 30px; /* Add more spacing between the two columns */
-    flex-wrap: wrap;
+.service-image img {
+    width: 100%;
+    max-width: 100%;
+    height: 100%;
+    object-fit: cover; /* Make sure images are scaled correctly */
 }
 
-.service {
-    flex: 1;
-    padding: 20px;
-    background-color: #fff; /* White background for each service block */
-    border: 1px solid #ddd; /* Subtle border to define each service block */
-    border-radius: 10px; /* Rounded corners for a modern look */
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05); /* Soft shadow for depth */
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.service:hover {
-    transform: translateY(-5px); /* Slight upward movement on hover */
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Enhance shadow on hover */
-}
-
+/* Styling for the headings (h3) */
 .service h3 {
-    font-size: 1.8rem;
-    color: #333; /* Make the headings a little darker for contrast */
+    font-size: 2rem; /* Slightly increase the font size */
+    color: white; /* Keep the text color white */
     margin-bottom: 20px;
-    text-transform: uppercase; /* Emphasize the headings */
-    letter-spacing: 1px; /* Slight letter spacing */
-    border-bottom: 2px solid #B4EC51; /* Add an accent underline for styling */
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-bottom: 2px solid #B4EC51; /* Underline with an accent color */
     padding-bottom: 10px;
 }
 
@@ -271,92 +341,49 @@ p {
 
 .service ul li {
     font-size: 1.2rem;
-    color: #555; /* Softer color for list items */
+    color: white;
     margin-bottom: 10px;
-    padding-left: 20px; /* Add left padding for spacing */
+    padding-left: 20px;
     position: relative;
 }
 
 .service ul li::before {
-    content: '•'; /* Custom bullet point */
-    color: #B4EC51; /* Accent color for bullet */
+    content: '•';
+    color: #B4EC51;
     font-size: 1.5rem;
     position: absolute;
     left: 0;
     top: 0;
 }
-/* Learn More Button Container */
-.learn-more-container {
-    width: 100%; /* Full width */
-    display: flex;
-    justify-content: flex-start; /* Aligns the button to the left */
-    padding: 20px 0;
-}
-
-.learn-more-button {
-    text-decoration: none;
-    background-color: #B4EC51;
-    color: #333;
-    padding: 10px 20px;
-    font-size: 1.2rem;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
-}
-
-.learn-more-button:hover {
-    background-color: #a3d749; /* Darker green on hover */
-}
-
-/* ------------------------------------ footer --------------------------- */
+/*---------------------------footer--------------------------------------------------------------------------------------*/
 .footer {
-    background-color: #B4EC51; /* Update with your project’s primary color */
+    background-color: #B4EC51; /* Minimalist color, can be changed */
     color: #333333; /* Darker text color for contrast */
     display: flex;
-    flex-direction: column; /* Stack the footer items vertically */
-    justify-content: space-between;
+    justify-content: center; /* Center the footer content */
     align-items: center;
-    padding: 1rem;
     width: 100%; /* Ensure full width */
 }
 
 .footer-content {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; /* Spread out the content across the footer */
     align-items: center;
     max-width: 1200px;
     width: 100%; /* Full width for the content */
-    padding: 1rem 0;
-}
-
-.footer-logo, .footer-contact, .footer-nav {
-    flex: 1;
-}
-
-.footer-logo {
-    text-align: left;
-}
-
-.footer-contact {
-    text-align: center;
-}
-
-.footer-nav {
-    text-align: right;
-}
-
-.footer-logo img {
-    width: 300px;
-    height: auto;
+    gap: 20px; /* Space between items */
 }
 
 .footer-nav ul {
     list-style: none;
     padding: 0;
     margin: 0;
+    display: flex;
+    gap: 20px; /* Add spacing between the navigation items */
 }
 
 .footer-nav ul li {
-    margin: 10px 0;
+    margin: 0; /* Remove vertical spacing */
 }
 
 .footer-nav ul li a {
@@ -369,29 +396,37 @@ p {
     color: #fff; /* Change color on hover for better visibility */
 }
 
-.footer-contact p, .footer-contact a {
-    margin: 0;
-    padding: 5px;
-    color: #333333; /* Ensure consistent text color */
+/* Align contact info and social icons inline */
+.footer-contact {
+    display: flex;
+    align-items: center;
+    gap: 20px; /* Space between contact info and social icons */
     text-align: center;
+    white-space: nowrap; /* Prevent wrapping of the contact info */
+}
+
+.footer-contact p {
+    margin: 0;
+    color: #333333; /* Ensure consistent text color */
+}
+
+.footer-social {
+    display: flex;
+    gap: 10px; /* Space between social icons */
 }
 
 .footer-social a {
     display: inline-block;
-    margin: 0 10px;
 }
 
 .footer-social img {
-    width: 60px;
+    width: 40px; /* Size for minimalism */
     height: auto;
 }
 
-/* Checkmate Web Development link */
 .checkmate-container {
     width: 100%;
     text-align: center; /* Center the checkmate link */
-    padding: 1rem 0; /* Add some padding */
-    margin-top: 1rem;
     border-top: 1px solid #333333; /* Optional separator line with contrasting color */
 }
 
@@ -403,6 +438,7 @@ p {
 .checkmate-link:hover {
     text-decoration: underline; /* Add underline on hover */
 }
+
 
 /** -------------------------------------------------------ABOUT US PAGE--------------------------------------------------------------------------------------------------------------- **/
 /* About Page Section */
@@ -420,89 +456,42 @@ p {
 #about-page h2 {
     font-size: 2.8rem;
     color: #333;
-    text-align: left;
-    margin-bottom: 40px;
+    margin-bottom: 0; /* Remove bottom margin to align better */
     text-transform: uppercase;
     letter-spacing: 1.5px;
 }
 
 /* About Content Columns */
 .about-content {
-    display: flex; /* Use flexbox for columns */
-    flex-direction: column;
-    gap: 20px; /* Add space between columns */
+    display: flex; /* Use flexbox for horizontal layout */
+    flex-direction: row; /* Ensure heading and text are side-by-side */
+    gap: 20px; /* Add space between the heading and text */
     margin-bottom: 40px;
+    align-items: flex-start; /* Align items to the top */
 }
 
-.about-text, .about-column {
-    flex: 1;
+/* Style for the heading (on the left) */
+.about-heading {
+    flex: 1; /* Allow this to take up one part of the space */
+    text-align: left; /* Align heading text to the left */
 }
 
-/* Ensure each text section has margin */
-.about-text p, .about-column p {
+/* Style for the text content (on the right) */
+.about-text {
+    flex: 2; /* Allow more space for the text content */
     font-size: 1.2rem;
     color: #555;
     line-height: 1.8;
-    margin-bottom: 20px; /* Space between paragraphs */
     max-width: 1000px;
+    text-align: left; /* Align text to the left */
 }
 
-.about-text, .about-column {
-    padding: 20px;
-    background-color: #B4EC51; /* Add background for clarity */
-    border-radius: 8px; /* Soft corners */
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+.about-text p {
+    margin-bottom: 20px; /* Space between paragraphs */
+    text-align: left; /* Align text to the left */
 }
 
-/* Subheadings */
-#about-page h3 {
-    font-size: 1.8rem;
-    color: #333;
-    margin-bottom: 20px;
-    border-bottom: 2px solid #B4EC51;
-    padding-bottom: 10px;
-}
 
-/* List Styling */
-.about-list {
-    list-style-type: none;
-    padding-left: 0;
-}
-
-.about-list li {
-    font-size: 1.2rem;
-    color: #555;
-    margin-bottom: 10px;
-    padding-left: 25px;
-    position: relative;
-}
-
-.about-list li::before {
-    content: '✔'; /* Custom bullet */
-    color: #B4EC51;
-    font-size: 1.5rem;
-    position: absolute;
-    left: 0;
-    top: 0;
-}
-
-/* Button Styling */
-.learn-more-button {
-    text-decoration: none;
-    background-color: #FC322F;
-    color: white;
-    padding: 12px 25px;
-    font-size: 1.2rem;
-    border-radius: 5px;
-    transition: background-color 0.3s ease, box-shadow 0.3s ease;
-    display: inline-block;
-    margin-top: 20px;
-}
-
-.learn-more-button:hover {
-    background-color: #a3d749;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-}
 /* ------------------------------------ services ------------------------------------------------------------------- */
 /* Services Section Styling */
 #services-section {
@@ -535,8 +524,8 @@ p {
 }
 
 /* Services Cards Container */
-.services-container {
-    max-width: 1200px;
+.alt-services-container {
+    max-width: 80%;
     margin: 0 auto;
 }
 
@@ -549,27 +538,29 @@ p {
 
 /* Individual Service Card Styling */
 .service-card {
-    background-color: #B4EC51;
+    background-color: #333333;
     padding: 20px;
     width: calc(50% - 20px); /* Adjust width to 50% for two columns */
     border: 1px solid #ddd;
-    border-radius: 10px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .service-card h4 {
     font-size: 1.5rem;
-    color: #333;
+    border-bottom: 1px solid #B4EC51; /* Accent underline */
+    color: white;
     margin-bottom: 10px;
     text-transform: uppercase;
     text-align: left;
+    padding: 5px;
 }
 
 .service-card p {
     font-size: 1.1rem;
-    color: #555;
+    color: white;
     line-height: 1.6;
+    text-align: left;
 }
 
 .service-card:hover {
@@ -593,16 +584,15 @@ p {
 .contact-form {
     flex: 2; /* Allocate more space to the form for better visual balance */
     margin-left: 20px; /* Maintain space between form and contact info */
-    background-color: #B4EC51; /* Darker shade for contrast */
+    background-color: #333333; /* Darker shade for contrast */
     padding: 20px;
-    border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
 }
 
 .contact-form h1 {
     font-size: 1.8em;
     margin-bottom: 20px;
-    color: black; /* Light text color for readability against dark background */
+    color: white; /* Light text color for readability against dark background */
 }
 
 .contact-form .form-group {
@@ -613,8 +603,6 @@ p {
     width: 100%;
     padding: 10px;
     margin-bottom: 10px;
-    border: 1px solid #ddd; /* Subtle border */
-    border-radius: 5px;
     background-color: white; /* Light background for input fields */
     color: #333; /* Dark text for contrast */
 }
@@ -622,10 +610,10 @@ p {
 .contact-form .btn {
     width: 100%;
     padding: 10px;
-    background-color: #FC322F; /* Button background color */
+    background-color: #B4EC51; /* Button background color */
     color: #333; /* Button text color */
     border: none;
-    border-radius: 5px;
+
     font-size: 1em;
     cursor: pointer;
 }
@@ -633,9 +621,9 @@ p {
 /* Contact Info Styles */
 .contact-info {
     flex: 1; /* Smaller space allocation compared to the form */
-    background-color: #B4EC51; /* Dark background for a sleek look */
+    background-color: #333333; /* Dark background for a sleek look */
     padding: 20px;
-    border-radius: 8px;
+    text-align: left;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     align-self: flex-start; /* Ensure alignment to the top */
 }
@@ -643,14 +631,19 @@ p {
 .contact-info h2 {
     font-size: 1.5em;
     margin-bottom: 15px;
-    color: black; /* Ensuring readability with a contrasting color */
+    color: white; /* Ensuring readability with a contrasting color */
 }
 
-.contact-info p, .contact-info a {
-    color: black; /* Maintain readability and aesthetic consistency */
+.contact-info p {
+    color: white; /* Maintain readability and aesthetic consistency */
     margin-bottom: 10px;
+    text-align: left;
 }
-
+.email {
+    color: white; /* Maintain readability and aesthetic consistency */
+    margin-bottom: 10px;
+    text-align: left;
+}
 .contact-info a:hover {
     text-decoration: underline; /* Enhance usability with visual feedback on hover */
 }
@@ -659,11 +652,10 @@ p {
 .phone-button {
     display: inline-block;
     padding: 10px 20px;
-    background-color: #FC322F; /* Consistent with form button styling */
-    color: white;
+    background-color: #B4EC51; /* Consistent with form button styling */
+    color: black;
     text-decoration: none;
     border: none;
-    border-radius: 5px;
     font-size: 1em;
     font-weight: bold;
     text-align: center;
