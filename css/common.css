@@ -387,7 +387,7 @@ p {
 }
 
 .footer-nav ul li a {
-    color: #333333; /* Darker text color for navigation links */
+    color: black; /* Darker text color for navigation links */
     text-decoration: none;
     transition: color 0.3s ease;
 }
@@ -407,7 +407,7 @@ p {
 
 .footer-contact p {
     margin: 0;
-    color: #333333; /* Ensure consistent text color */
+    color: black; /* Ensure consistent text color */
 }
 
 .footer-social {
@@ -431,7 +431,7 @@ p {
 }
 
 .checkmate-link {
-    color: #333333; /* Darker text for contrast */
+    color: black;
     text-decoration: none;
 }
 
