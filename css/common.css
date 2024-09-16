@@ -494,6 +494,14 @@ p {
 
 /* ------------------------------------ services ------------------------------------------------------------------- */
 /* Services Section Styling */
+.card, .card-img-top {
+    border-radius: 0;
+}
+.card-body, .card-text {
+    background-color: #333333;
+    color: white;
+    text-align: left;
+}
 #services-section {
     padding: 60px 20px;
     background-color: #f9f9f9;
