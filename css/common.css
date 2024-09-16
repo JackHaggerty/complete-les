@@ -117,7 +117,7 @@ nav {
     width: 90%;
     margin: 0 auto;
 }z
-.nav-container a, img {
+.nav-container a, .nav-container img {
     display: inline-block;
     margin: 5px;
     justify-content: left;
@@ -132,7 +132,7 @@ nav {
     flex-direction: row;
     justify-content: right;
     align-items: center;
-
+    margin: 0;
     padding: 10px 0;
 }
 .nav-links li {
