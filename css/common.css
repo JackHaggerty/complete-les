@@ -49,7 +49,7 @@ html {
     font-size: 3rem;
     align-items: center;
     justify-content: center;
-    margin: 25% 0;
+    margin: 10% 0;
     margin-right: 50%;
 }
 .container {
@@ -66,12 +66,12 @@ html {
 }
 
 .hero-logo {
-    margin-top: 350px;
-    margin-bottom: 120px;
+    margin-top: 10%;
+    margin-bottom: 5%;
 }
 
 .hero-logo img {
-    width: 1250px; /* Adjust the logo size */
+    width: 85%; /* Adjust the logo size */
     height: auto; /* Maintain aspect ratio */
 }
 
@@ -367,7 +367,7 @@ p {
     top: 0;
 }
 /*---------------------------footer--------------------------------------------------------------------------------------*/
-.footer {
+body .footer {
     background-color: #B4EC51; /* Minimalist color, can be changed */
     color: #333333; /* Darker text color for contrast */
     display: flex;
