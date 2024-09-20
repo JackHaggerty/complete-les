@@ -337,7 +337,18 @@ p {
 .service ul {
     list-style-type: none;
     padding-left: 0;
+    margin: 0;
+    width: 50%; /* Each list takes up 50% of the container */
 }
+
+.service .list-wrapper {
+    display: flex;
+    flex-direction: row; /* Ensure the lists are in a row, not column */
+    flex-wrap: nowrap; /* Ensure the lists stay side by side */
+    width: 100%;
+    gap: 20px; /* Optional: space between the lists */
+}
+
 
 .service ul li {
     font-size: 1.2rem;
