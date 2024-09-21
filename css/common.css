@@ -723,6 +723,16 @@ body .footer {
         height: auto;
     
     }
+    .container{
 
+        align-items: center;
+        justify-content: center;
+    }
+    .hero-logo {
+        width: 500px;
+    }
+    #hero {
+        background-position: right center;
+    }
 
 }
