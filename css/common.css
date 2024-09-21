@@ -700,7 +700,9 @@ body .footer {
 #services-mobile {
     display: none;
 }
-
+.footer-mobile {
+    display: none;
+}
 
 @media only screen and (max-width: 768px) {
     html {
@@ -754,8 +756,12 @@ body .footer {
     #services {
         display: none;
     }
-
-
+    .footer {
+        display: none !important;
+    }
+    .footer-mobile {
+        display: block !important;
+    }
 
     #services-mobile {
         display: block;
@@ -796,6 +802,79 @@ body .footer {
         margin: 1rem 0;
         text-decoration: none;
     }
+    .footer-mobile {
+        background-color: #B4EC51;
+        color: black;
+        padding: 20px;
+        text-align: center;
+        display: flex;
+        flex-direction: column; /* Stack footer content vertically */
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .footer-content {
+        width: 100%; /* Ensure full width */
+        display: flex;
+        flex-direction: column; /* Stack the content vertically */
+        justify-content: center;
+        align-items: center;
+    }
+    
+    /* Add flex properties to footer-contact */
+    .footer-contact {
+        display: flex;
+        flex-direction: column; /* Stack children vertically */
+        align-items: center;    /* Center children horizontally */
+    }
+    
+    .footer-mobile a {
+        color: black;
+        text-decoration: none;
+        display: block; /* Ensure links are treated as block elements */
+    }
+    
+    .footer-mobile a:hover {
+        text-decoration: underline;
+    }
+    
+    /* Email and Phone Number */
+    .footer-mobile .footer-email-phone {
+        display: flex;
+        flex-direction: column; /* Stack email and phone vertically */
+        gap: 10px; /* Add space between email and phone */
+        margin-bottom: 20px; /* Space between the email/phone and the social icons */
+    }
+    
+    /* Social Icons */
+    .footer-mobile .footer-social {
+        display: flex;
+        justify-content: center;
+        gap: 20px; /* Space between social icons */
+    }
+    
+    .footer-mobile .footer-social a {
+        display: inline-block;
+    }
+    
+    .footer-mobile .footer-social img {
+        width: 52px;
+        height: auto;
+    }
+    
+    /* Checkmate Link Styling */
+    .footer-mobile .checkmate-link {
+        margin-top: 15px;
+    }
+    
+    .footer-mobile .checkmate-link a {
+        color: black;
+    }
+    
+    .footer-mobile .checkmate-link a:hover {
+        text-decoration: underline;
+    }
+    
     
     
 }
