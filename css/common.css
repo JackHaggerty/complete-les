@@ -116,15 +116,21 @@ html {
 nav {
     width: 90%;
     margin: 0 auto;
-}z
-.nav-container a, .nav-container img {
-    display: inline-block;
-    margin: 5px;
-    justify-content: left;
-    width: 300px;
-    height: auto;
-
 }
+.nav-logo img {
+    display: block;
+    margin: 0; /* Ensure there's no margin */
+    padding: 0; /* Ensure there's no padding */
+    width: 380px;
+    height: auto;
+}
+
+.nav-container a {
+    display: flex;
+    align-items: center; /* Ensures the logo is vertically centered */
+    margin: 0;
+}
+
 .nav-links {
     list-style: none;
     color: black;
@@ -710,4 +716,13 @@ body .footer {
     .sidebar a {
         font-size: 18px;
     }
+    .nav-logo img {
+        margin-top: 5%;
+        margin-bottom: 5%;
+        width: 250px;
+        height: auto;
+    
+    }
+
+
 }
