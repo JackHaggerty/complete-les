@@ -6,94 +6,52 @@ margin: 0;
 box-sizing: border-box;
 }
 
-html {
-    font-family: 'roboto mono';
-    font-size: 18px;
+/* Ensure the body takes up the full height of the viewport */
+html, body {
+    height: 100%; /* Make sure the height is 100% for both HTML and body */
+    margin: 0; /* Remove any default margins */
+    display: flex; /* Use Flexbox on the body */
+    flex-direction: column; /* Ensure that elements stack vertically */
 }
 
+/* Main content container (e.g., the section containing your content) */
+main {
+    flex: 1; /* Allows this section to take up all remaining space */
+}
 #hero {
     width: 100%;
-    height: 80vh; /* 100% of the viewport height */
+    height: 80vh; /* Ensure hero section takes full viewport height */
     background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('../images/excavator-hero-2.jpg');
-    background-size: cover; /* Ensures the image covers the entire section */
-    background-position: center; /* Centers the image */
-    background-repeat: no-repeat; 
+    background-size: cover; /* Ensure background image covers the entire section */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat;
     color: white;
+    display: flex; /* Use flexbox to center content */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
 }
 
-#alt-hero {
-    width: 100%;
-    height: 50vh; /* 100% of the viewport height */
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../images/excavator-hero-2.jpg');
-    background-size: cover; /* Ensures the image covers the entire section */
-    background-position: center; /* Centers the image */
-    background-repeat: no-repeat; 
-    color: white;
-}
-.alt-container {
-    width: 80%;
-    height: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-
-    
-}
-.alt-info {
-    text-align: center; /* Center the text and logo */
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-}
-.alt-info h1 {
-    font-size: 3rem;
-    align-items: center;
-    justify-content: center;
-    margin: 10% 0;
-    margin-right: 50%;
-}
 .container {
-    width: 80%;
-    height: 100%;
+    width: 100%;
     max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-
-    
+    text-align: center; /* Center text inside the container */
 }
+
 .info {
-    text-align: center; /* Center the text and logo */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
 }
 
-.hero-logo {
-    margin-top: 10%;
-    margin-bottom: 5%;
-}
-
+/* Adjust the logo size and ensure responsiveness */
 .hero-logo img {
-    width: 85%; /* Adjust the logo size */
+    width: 100%; /* Adjust size for larger screens */
     height: auto; /* Maintain aspect ratio */
-}
-
-.info p {
-    font-size: 18px; /* Adjust the text size */
-    margin-bottom: 20px; /* Space between text and button */
-}
-
-.container .info h1 {
-    font-size: 3rem;
     margin-bottom: 1rem;
 }
-.container .info h2 {
-    font-size: 1.5rem;
-    margin-bottom: 2rem;
-}
 
-.container .info p {
-    font-size: 1.2rem;
-    max-width: 70%;
-
-}
 .container .info a {
     text-decoration: none;
     display: inline-block;
@@ -101,8 +59,46 @@ html {
     border-radius: 4px;
     font-size: 1.8rem;
     padding: 0.5em 2em;
-    margin-top: 2rem;
+    margin-top: 1rem;
     color: black;
+}
+#alt-hero {
+    width: 100%;
+    height: 50vh; /* 50% of the viewport height */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../images/excavator-hero-2.jpg');
+    background-size: cover; /* Ensure the image covers the entire section */
+    background-position: center; /* Center the background image */
+    background-repeat: no-repeat; 
+    color: white;
+    display: flex; /* Use flexbox to center content */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    text-align: center; /* Center text inside */
+}
+
+.alt-container {
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%; /* Ensure it takes full height of the hero */
+}
+
+.alt-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    text-align: center;
+}
+
+.alt-info h1 {
+    font-size: 3rem;
+    margin: 0; /* Remove margins to keep it centered */
+    padding: 0; /* Remove padding if any */
+    color: white; /* Ensure the text color contrasts well with the background */
 }
 .nav-container {
     position: fixed;
@@ -239,6 +235,7 @@ nav {
 }
 
 .icon-list {
+
     list-style: none;
     display: flex;
     justify-content: center;
@@ -725,6 +722,9 @@ body .footer {
         width: 250px;
         height: auto;
     
+    }
+    .icon-list {
+        display: none;
     }
     .container{
 
