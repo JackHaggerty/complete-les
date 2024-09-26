@@ -73,7 +73,6 @@ main {
     display: flex; /* Use flexbox to center content */
     justify-content: center; /* Center horizontally */
     align-items: center; /* Center vertically */
-    text-align: center; /* Center text inside */
 }
 
 .alt-container {
@@ -176,8 +175,7 @@ nav {
     right: 0;
     height: 100vh;
     z-index: 999;
-    background-color: rgba(0, 0, 0, 0.26);
-    backdrop-filter: blur(10px);
+    background-color: rgba(0, 0, 0, 0.898);
     box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
     display: none;
     flex-direction: column;
@@ -205,7 +203,7 @@ nav {
     padding: 10px 20px; /* Adds padding for a button-like appearance */
     font-size: 16px; /* Adjust the font size */
     color: rgb(0, 0, 0); /* Text color */
-    background-color: white; /* Background color of the button */
+    background-color: #B4EC51; /* Background color of the button */
     border: none; /* Removes any default border */
     text-decoration: none; /* Removes underline from link */
     text-align: center; /* Centers the text */
@@ -216,23 +214,14 @@ nav {
     display: none;
 }
 
-/* About Us, Services, and Contact Form Styling */
 #about-us {
-    padding: 60px 0;
-    background-color: #f4f4f4;
+    padding: 60px 0 80px 0;
+    background-color: #f9f9f9;
     text-align: center;
-}
-
-
-
-
-/* Ensure flexbox layout is vertical (column) */
-#about-us {
-    position: relative; /* Allows absolute positioning for icons */
-    padding-bottom: 80px; /* Adds space at the bottom for the icons */
-    background-color: #f9f9f9; /* Optional background color */
+    position: relative;
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
+
 
 .icon-list {
 
@@ -714,7 +703,7 @@ body .footer {
         width: 100%;
     }
     .sidebar a {
-        font-size: 18px;
+        font-size: 1.4rem; /* Or a specific px value */
     }
     .nav-logo img {
         margin-top: 5%;
@@ -727,7 +716,6 @@ body .footer {
         display: none;
     }
     .container{
-
         align-items: center;
         justify-content: center;
     }
@@ -890,5 +878,11 @@ body .footer {
     }
     .contact-form {
         margin-top: 20px; /* Space between sections */
+    }
+
+    /*---------------------------------------about page-----------------------------------*/
+    .about-content {
+        flex-direction: column; /* Stack heading and text content */
+        gap: 20px; /* Space between heading and text */
     }
 }
